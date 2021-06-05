@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Songs!</title>
+</head>
+<body>
+    <h1>Download Songs!</h1>
+
+    <form action = "/getSongs" method = "POST">
+        <div>
+            <label for = "Song URL"> Enter the Youtube URL for the Song</label>
+            <input type = "text" name = "Song URL" placeholder="Enter URL">
+            <br>
+
+            <label for = "Song Playlist URL"> Enter the Youtube URL for the Song Playlist</label>
+            <input type = "text" name = "Song Playlist URL" placeholder="Enter URL">
+            <br>
+
+            <label for = "SavePath"> Enter the path where you want to save the Songs</label>
+            <input type="text" name = "SavePath" placeholder="Enter Directory">
+            <br>
+
+            <input type="radio" id="A Song" name="type" value="A Song">
+            <label for="A Song">A Song</label><br>
+            <input type="radio" id="A Playlist" name="type" value="A Playlist">
+            <label for="A Playlist">A Playlist</label><br>
+
+            <button type = "submit">Get!</button>
+        </div>
+    </form>
+</body>
+</html>
