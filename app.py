@@ -20,8 +20,10 @@ def getSongs():
     if inputtype == "A Song":
         yt = YouTube(songurl)
 
-        audiofiles = yt.streams.filter(only_audio=True).first() 
+        audiofiles = yt.streams.filter(only_audio=True).first()
+        print("here1") 
         out_file =audiofiles.download(SAVE_PATH)
+        print("here 2")
         base, ext = os.path.splitext(out_file)
         new_file = base + '.mp3'
         os.rename(out_file, new_file)
